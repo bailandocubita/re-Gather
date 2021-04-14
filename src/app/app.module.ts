@@ -7,6 +7,7 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { EventListComponent } from './event-list/event-list.component';
 import { BucketListPageComponent } from './bucket-list-page/bucket-list-page.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EventDetailsComponent } from './event-details/event-details.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
