@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reGather';
+
+  searchEvents: boolean = false;
+
+  onSearch(){
+    this.searchEvents = false;
+  }
 }
