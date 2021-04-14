@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 10vh;
+    border: black 1px solid;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+
+
+.container{
+    height: 80vh;
+}
