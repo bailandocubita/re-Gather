@@ -7,7 +7,7 @@ import { EventListComponent } from './event-list/event-list.component';
 
 const routes: Routes = [
   { path: 'events', component: EventListComponent},
-  { path: 'events/:name', component: EventDetailsComponent},
+  { path: 'events/:id', component: EventDetailsComponent},
   { path: 'my-events', component: BucketListPageComponent},
   { path: '', redirectTo: '/events', pathMatch: 'full'}
 ];
