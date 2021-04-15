@@ -10,10 +10,17 @@
 </div> -->
 
 
-<ul>
-    <li *ngFor="let event of events">
-      <a routerLink="/details/{{event}}">{{event}}</a>
-    </li>
-  </ul>
+
+      <a *ngFor="let event of events" routerLink="/events/{{event.id}}">
+        
+        <h2>{{event.title}}</h2>
+        <p>{{event.location}}</p>
+        <p>{{event.date}}</p>
+        <p>{{event.category}}</p>
+        <p>{{event.price | currency}}</p>
+      
+      </a>
+      
+
   
   <router-outlet></router-outlet>
