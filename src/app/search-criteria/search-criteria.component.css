@@ -1,18 +1,43 @@
+div{
+    background-color: white;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    height: 94vh;
+    /* display: flex;
+    align-items: flex-st; */
+    margin-top: 6vh;
+}
+
+section{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vh;
+}
+
 form{
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin: 3vh;
+}
+
+input{
+    height: 40px;
+    margin: 5px 0;
 }
 
 button{
     width: 50%;
+    height: 40px;
 }
 
-.border{
-    border: black 1px solid;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.back-button{
+    width: 40px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
 }
-

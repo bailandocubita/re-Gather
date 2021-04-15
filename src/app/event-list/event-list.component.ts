@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
 import { Event } from '../event';
 
 @Component({
@@ -7,35 +9,22 @@ import { Event } from '../event';
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
+ 
+  id: string | null = '';
 
-  constructor() { }
+  constructor(private data: DataService, private route: ActivatedRoute) { 
 
-  ngOnInit(): void {
   }
 
-  //placeholder for now
-  events: Event[] = [
-    {
-      title: 'Art Show',
-      location: 'Detroit',
-      date: '4-16-2021',
-      category: 'art',
-      price: 20
-    },
-    {
-      title: 'Concert',
-      location: 'Cleveland',
-      date: '5-6-2021',
-      category: 'music',
-      price: 60
-    },
-    {
-      title: 'Play',
-      location: 'Grand Rapids',
-      date: '6-26-2021',
-      category: 'theatre',
-      price: 40
-    }
-  ]
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => this.id = params.get('id'));
+  }
 
+  viewDetails() {
+    this.data
+  }
+
+  getEvents() {
+    return event;
+  }
 }

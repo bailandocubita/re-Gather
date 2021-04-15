@@ -8,6 +8,7 @@ import { EventListComponent } from './event-list/event-list.component';
 import { BucketListPageComponent } from './bucket-list-page/bucket-list-page.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { FormsModule } from '@angular/forms';
+import { EventFilterPipe } from './event-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     SearchCriteriaComponent,
     EventListComponent,
     BucketListPageComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    EventFilterPipe
   ],
   imports: [
     BrowserModule,
