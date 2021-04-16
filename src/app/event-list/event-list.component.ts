@@ -18,7 +18,7 @@ export class EventListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(params => this.id = params.get('id'));
+    this.route.paramMap.subscribe(params => this.id = params.get('id'));
     this.events = this.data.events;
   }
 
@@ -26,7 +26,4 @@ export class EventListComponent implements OnInit {
     this.data
   }
 
-  getEvents() {
-    return event;
-  }
 }
