@@ -1,4 +1,15 @@
-<p>Add it to your BucketList</p>
+<h2>Bucket List Events</h2>
+
 <div *ngFor="let event of bucketEvents" class="border">
-  <h1>hopefully bucket list items show up here</h1>
+
+  <router-outlet></router-outlet>
 </div>
+
+<nav>
+  <ul>
+    <li *ngFor="let event of bucketEvents">
+      <a routerLink="../my-events">Bucket List Events</a>
+    </li>
+  </ul>
+</nav>
+
