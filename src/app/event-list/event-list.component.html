@@ -1,20 +1,14 @@
 
-<h2>Events</h2>
-<!-- <div (click)="viewDetails()" *ngFor='let event of events' class='border'>
+<h2>Choose your Gathering</h2>
 
+<a *ngFor="let event of events" routerLink="/events/{{event.id}}">
+  <section>    
     <h2>{{event.title}}</h2>
     <p>{{event.location}}</p>
     <p>{{event.date}}</p>
     <p>{{event.category}}</p>
     <p>{{event.price | currency}}</p>
-
-</div> -->
-
-
-<ul>
-    <li *ngFor="let event of events">
-      <a routerLink="/details/{{event}}">{{event}}</a>
-    </li>
-  </ul>
-  
-  <router-outlet></router-outlet>
+  </section>
+</a>
+      
+<router-outlet></router-outlet>

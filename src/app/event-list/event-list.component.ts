@@ -10,6 +10,7 @@ import { Event } from '../event';
 })
 export class EventListComponent implements OnInit {
  
+  events: Event[] | null = null;
   id: string | null = '';
 
   constructor(private data: DataService, private route: ActivatedRoute) { 
@@ -18,13 +19,11 @@ export class EventListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => this.id = params.get('id'));
+    this.events = this.data.events;
   }
 
   viewDetails() {
     this.data
   }
 
-  getEvents() {
-    return event;
-  }
 }
