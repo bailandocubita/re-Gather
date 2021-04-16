@@ -1,7 +1,11 @@
+
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+
 import { Event } from '../event';
+import { TicketmasterService } from '../ticketmaster.service';
 
 @Component({
   selector: 'app-event-list',
@@ -10,20 +14,20 @@ import { Event } from '../event';
 })
 export class EventListComponent implements OnInit {
  
-  events: Event[] | null = null;
+
+  events: Observable<any> | null = null;
   id: string | null = '';
+  searchKeyword: string = '';
 
-  constructor(private data: DataService, private route: ActivatedRoute) { 
-
-  }
+  constructor(private service: TicketmasterService) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => this.id = params.get('id'));
-    this.events = this.data.events;
+    this.events = this.service.searchTicketmaster(this.searchKeyword);
   }
 
-  viewDetails() {
-    this.data
+  updateSearch(): void {
+    this.events = this.service.searchTicketmaster(this.searchKeyword);
   }
+
 
 }

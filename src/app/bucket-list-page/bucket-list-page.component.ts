@@ -12,6 +12,7 @@ export class BucketListPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 // bucketEvents: Event [] = [
 //   {
 //     title: 'Music Festivle',
@@ -35,4 +36,5 @@ export class BucketListPageComponent implements OnInit {
 //     price: 60
 //   }
 // ]
+
 }
