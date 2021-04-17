@@ -1,8 +1,9 @@
-
 <h2>Bucket List Events</h2>
 
-<div *ngFor="let event of bucketEvents" class="border">
-
+<div
+  *ngFor="let event of bucketEvents | async"
+  routerLink="/events/{{my-events}"
+>
   <router-outlet></router-outlet>
 </div>
 
@@ -13,5 +14,3 @@
     </li>
   </ul>
 </nav>
-
-
