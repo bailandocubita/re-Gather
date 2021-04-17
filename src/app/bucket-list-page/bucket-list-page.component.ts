@@ -16,4 +16,3 @@ export class BucketListPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-}
