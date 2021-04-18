@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TicketmasterService } from './ticketmaster.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reGather';
+  events: Observable <any> | null = null;
 
   searchEvents: boolean = false;
 
@@ -14,6 +17,12 @@ export class AppComponent {
   location: string = '';
   date: string = '';
   category: string = '';
+
+  constructor(private service: TicketmasterService) { }
+  
+  ngOnInit() {
+    this.events = this.service.searchTicketmaster();
+  }
 
   onSearch(event: any){
     this.keyword = event.keyword;

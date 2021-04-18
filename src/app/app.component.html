@@ -1,4 +1,4 @@
-<app-search-criteria *ngIf='searchEvents'
+<app-search-criteria [events]='events | async' *ngIf='searchEvents'
 (searched)='onSearch($event)' (cancel)='onCancel()'></app-search-criteria>
 
 <header>

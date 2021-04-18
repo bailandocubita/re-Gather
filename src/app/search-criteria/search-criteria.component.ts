@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Router} from '@angular/router';
+import { Event } from 'src/app/event';
 
 @Component({
   selector: 'app-search-criteria',
@@ -8,6 +10,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SearchCriteriaComponent implements OnInit {
   event: Event | null = null;
   search: {} | null = null;
+  @Input() events: Event[] = [];
 
   keyword: string = '';
   location: string = '';
@@ -19,7 +22,7 @@ export class SearchCriteriaComponent implements OnInit {
   @Output() searched = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +39,16 @@ export class SearchCriteriaComponent implements OnInit {
 
   cancelSearch(){
     this.cancel.emit(true);
+  }
+
+  getRandom(){
+
+    let randomInt = Math.floor(Math.random() * this.events.length);
+
+    console.log(randomInt);
+    console.log(this.events.length);
+
+    this.router.navigate(['/events', this.events[randomInt].id]);
   }
 
 }
