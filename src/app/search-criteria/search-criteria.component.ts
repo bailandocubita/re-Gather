@@ -1,6 +1,10 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TicketmasterService } from '../ticketmaster.service';
+import { Router } from '@angular/router';
+import { Event } from 'src/app/event';
+
 
 @Component({
   selector: 'app-search-criteria',
@@ -10,6 +14,7 @@ import { TicketmasterService } from '../ticketmaster.service';
 export class SearchCriteriaComponent implements OnInit {
   events: Observable<any> | null = null;
   search: {} | null = null;
+  @Input() events: Event[] = [];
 
   keyword: string = '';
   location: string = '';
@@ -21,7 +26,9 @@ export class SearchCriteriaComponent implements OnInit {
   @Output() searched = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<any>();
 
-  constructor(private service: TicketmasterService) { }
+
+  constructor(private service: TicketmasterService, private router: Router) { }
+
 
   ngOnInit(): void {
   }
@@ -31,6 +38,16 @@ export class SearchCriteriaComponent implements OnInit {
     this.service.searchCity = location;
     this.service.searchDate = date;
     this.service.searchCategory = category;
+  }
+
+  getRandom(){
+
+    let randomInt = Math.floor(Math.random() * this.events.length);
+
+    console.log(randomInt);
+    console.log(this.events.length);
+
+    this.router.navigate(['/events', this.events[randomInt].id]);
   }
 
 }

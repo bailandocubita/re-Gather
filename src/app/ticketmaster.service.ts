@@ -15,6 +15,7 @@ export class TicketmasterService {
 
   constructor(private http: HttpClient) { }
 
+
   searchTicketmaster(searchKeyword: string, searchCity: string,searchDate: string, searchCategory: string){
     let keyword = '';
     let city = '';
@@ -51,7 +52,5 @@ export class TicketmasterService {
     }
     
   }
-
-  
 
 }
