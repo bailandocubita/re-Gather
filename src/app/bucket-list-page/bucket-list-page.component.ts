@@ -13,7 +13,7 @@ export class BucketListPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-// bucketEvents: Event [] = [
+bucketEvents: Event [] = [
 //   {
 //     title: 'Music Festivle',
 //     location:'Chicago',
@@ -35,6 +35,6 @@ export class BucketListPageComponent implements OnInit {
 //     category: 'Art', 
 //     price: 60
 //   }
-// ]
+]
 
 }

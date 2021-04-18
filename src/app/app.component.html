@@ -1,11 +1,11 @@
-<app-search-criteria *ngIf='searchEvents'
-(searched)='onSearch($event)' (cancel)='onCancel()'></app-search-criteria>
+<!-- <app-search-criteria *ngIf='searchEvents'
+(searched)='onSearch($event)' (cancel)='onCancel()'></app-search-criteria> -->
 
 <header>
     <h1>re:Gather</h1>
 </header>
 
-<div class='container' [ngClass] ='{noscroll : searchEvents}'>
+<div class='container'>
     <router-outlet></router-outlet>
 </div>
 

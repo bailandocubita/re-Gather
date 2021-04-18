@@ -1,26 +1,29 @@
-<div>
-    <button class='back-button' (click)='cancelSearch()'>
-        <
-    </button>
-    <section>
-        <h2>Find a Gathering</h2>
+<section>
+    <h2>Find a Gathering</h2>
 
-        <form>
-            <input id='keyword' name='keyword' placeholder='keyword' 
-            [(ngModel)]='keyword'>
+    <form>
+        <input id='keyword' name='keyword' placeholder='Keyword' 
+        [(ngModel)]='keyword'>
 
-            <input id='location' name='location' placeholder='location' 
-            [(ngModel)]='location'>
+        <input id='location' name='location' placeholder='City' 
+        [(ngModel)]='location'>
 
-            <input id='date' name='date' 
-            placeholder='date' [(ngModel)]='date'>
+        <input id='date' name='date' 
+        placeholder='Date' [(ngModel)]='date'>
 
-            <input id='category' name='category' placeholder='category' 
-            [(ngModel)]='category'>
-        </form>
+        <input list='category' name='category' placeholder='Category' 
+        [(ngModel)]='category'>
+        <datalist id='category'>
+            <option value='Arts & Theatre'></option>
+            <option value='Film'></option>
+            <option value='Music'></option>
+            <option value='Sports'></option>
+        </datalist>
+    </form>
 
-        <button (click)='searchEvent(keyword, location, date, category)'>Search</button>
-    </section>
-    
-</div>
+    <a routerLink='/events' (click)='searchEvent(keyword, location, date, category)'>Search</a>
+
+    <button>Random Event</button>
+</section>
+
 
