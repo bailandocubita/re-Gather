@@ -10,6 +10,11 @@ section{
     padding-top: 6vh;
 }
 
+h2{
+    font-family: 'Roboto Condensed', Sans-Serif;
+    font-weight: normal;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -20,6 +25,11 @@ form{
 input{
     height: 40px;
     margin: 5px 0;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+    color: black;
 }
 
 button, a {
@@ -30,8 +40,13 @@ button, a {
     display:flex;
     justify-content: center;
     align-items: center;
-    border: #333 1px solid;
+    border: none;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(109, 68, 135);;
+    color: white;
+    font-family: 'Roboto Condensed', Sans-Serif;
+    font-size: 16px;
 }
 
 .back-button{
