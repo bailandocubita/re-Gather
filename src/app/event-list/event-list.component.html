@@ -1,7 +1,7 @@
 
 <h2>Choose your Gathering</h2>
 
-<a *ngFor="let event of events| async" routerLink="/events/{{event.id}}">
+<a *ngFor="let event of eventList| async" routerLink="/events/{{event.id}}">
   <section>    
     <h2>{{event.name}}</h2>
     <p>{{event._embedded.venues[0].city.name}}, 

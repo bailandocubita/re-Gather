@@ -12,7 +12,7 @@ import { Event } from 'src/app/event';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
-  events: Observable<any> | null = null;
+  // events: Observable<any[]> | null = null;
   search: {} | null = null;
   @Input() events: Event[] = [];
 
@@ -21,31 +21,32 @@ export class SearchCriteriaComponent implements OnInit {
   date: string = '';
   category: string = '';
 
-  searchEvents: boolean = false;
-
   @Output() searched = new EventEmitter<any>();
-  @Output() cancel = new EventEmitter<any>();
-
+  
 
   constructor(private service: TicketmasterService, private router: Router) { }
 
 
   ngOnInit(): void {
+
   }
 
-  searchEvent(keyword: string, location: string, date: string, category: string){
+  searchEvent(keyword: string | null, location: string| null, date: string| null, category: string| null){
     this.service.searchKeyword = keyword;
     this.service.searchCity = location;
     this.service.searchDate = date;
     this.service.searchCategory = category;
+    this.searched.emit(true);
+    this.router.navigate(['/events']);
   }
 
   getRandom(){
-
+    
     let randomInt = Math.floor(Math.random() * this.events.length);
 
     console.log(randomInt);
     console.log(this.events.length);
+    this.searched.emit(true);
 
     this.router.navigate(['/events', this.events[randomInt].id]);
   }

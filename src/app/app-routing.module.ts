@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'events', component: EventListComponent},
   { path: 'events/:id', component: EventDetailsComponent},
   { path: 'my-events', component: BucketListPageComponent},
-  { path: '', redirectTo: '/search', pathMatch: 'full'}
+  { path: '', redirectTo: '/events', pathMatch: 'full'}
 ];
 
 @NgModule({

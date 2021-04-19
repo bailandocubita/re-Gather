@@ -8,15 +8,14 @@ import { map } from 'rxjs/operators';
 })
 
 export class TicketmasterService {
-  searchKeyword: string = '';
-  searchCity: string = '';
-  searchDate: string = '';
-  searchCategory: string = '';
+  searchKeyword: string | null = null;
+  searchCity: string | null = null;
+  searchDate: string | null = null;
+  searchCategory: string | null = null;
 
   constructor(private http: HttpClient) { }
 
-
-  searchTicketmaster(searchKeyword: string, searchCity: string,searchDate: string, searchCategory: string){
+  searchTicketmaster(searchKeyword: string | null = null, searchCity: string| null = null,searchDate: string| null = null, searchCategory: string| null = null){
     let keyword = '';
     let city = '';
     let date = '';
@@ -52,5 +51,6 @@ export class TicketmasterService {
     }
     
   }
+  
 
 }
