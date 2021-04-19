@@ -15,19 +15,19 @@ import { TicketmasterService } from '../ticketmaster.service';
 
 export class EventListComponent implements OnInit {
 
-  events: Observable<any> | null = null;
+  eventList: Observable<any> | null = null;
   id: string | null = '';
-  searchKeyword: string = this.service.searchKeyword;
-  searchCity: string = this.service.searchCity;
-  searchDate: string = this.service.searchDate;
-  searchCategory: string = this.service.searchCategory;
+  searchKeyword: string| null = this.service.searchKeyword;
+  searchCity: string| null = this.service.searchCity;
+  searchDate: string| null = this.service.searchDate;
+  searchCategory: string| null = this.service.searchCategory;
 
   constructor(private service: TicketmasterService) { }
 
   ngOnInit(): void {
 
-  this.events = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
-    
+  this.eventList = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
+  
   }
 
 

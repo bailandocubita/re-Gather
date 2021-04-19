@@ -38,3 +38,7 @@ nav ul{
     margin: 6vh 0;
     padding: 20px;
 }
+
+.displaynone{
+    display: none;
+}
