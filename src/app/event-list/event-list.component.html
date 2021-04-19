@@ -3,7 +3,7 @@
 
 <a *ngFor="let event of eventList| async" routerLink="/events/{{event.id}}">
   <section>    
-    <h2>{{event.name}}</h2>
+    <h3>{{event.name}}</h3>
     <p>{{event._embedded.venues[0].city.name}}, 
         {{event._embedded.venues[0].state.stateCode}}
     </p>
