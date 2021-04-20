@@ -3,7 +3,7 @@
 <h2>Choose your Gathering</h2>
 
 <section *ngFor="let event of eventList| async">   
-  <button (click)='addTask(event)'>heart</button> 
+  <button (click)='saveEvent(event)'>heart</button> 
   <a routerLink="/events/{{event.id}}">
     <h3>{{event.name}}</h3>
     <p>{{event._embedded.venues[0].city.name}}, 
