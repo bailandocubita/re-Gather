@@ -30,5 +30,9 @@ export class EventListComponent implements OnInit {
   
   }
 
+  addTask(eventItem: any){
+    this.service.addBucketListEvent(eventItem);
+  }
+
 
 }

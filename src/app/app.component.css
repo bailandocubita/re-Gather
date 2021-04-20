@@ -16,6 +16,7 @@ header{
     align-items: center;
     font-family: 'Roboto Condensed', Sans-Serif;
     color: rgb(102, 67, 123);
+    z-index: 1000;
 }
 
 nav{
@@ -26,6 +27,7 @@ nav{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1000;
 }
 
 nav ul{
