@@ -1,24 +1,24 @@
-<!-- <app-search-criteria *ngIf='searchEvents' (searched)='onSearch()'></app-search-criteria> -->
 
-<!-- <h1>re:Gather</h1> -->
+<app-search-criteria [events]='events | async' *ngIf='searchEvents' (searched)='onSearch($event)'></app-search-criteria>
 
-<!-- <div class='container'> -->
-<!-- <router-outlet></router-outlet> -->
-<!-- </div> -->
+<header>
+    <h1>re:Gather</h1>
+</header>
 
-<!-- <nav> -->
-<!-- <ul> -->
-<!-- <li> -->
-<!-- <a routerLink='' (click)='searchEvents = true'>Search</a> -->
-<!-- </li> -->
-<!-- <li> -->
-<!-- <a routerLink='/events'>Explore</a> -->
-<!-- </li> -->
-<!-- <li> -->
-<!-- <a routerLink='/my-events'>My Events</a> -->
-<!-- </li> -->
-<!-- </ul> -->
-<!-- </nav> -->
-<app-event-details></app-event-details>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<div class='container' [ngClass]='{displaynone : searchEvents}'>
+    <router-outlet></router-outlet>
+</div>
+
+<nav>
+    <ul>
+        <li>
+            <a routerLink='/search' (click)='searchEvents=true'>Search</a>
+        </li>
+        <li>
+            <a routerLink='/events' (click)='searchEvents=false'>Explore</a>
+        </li>
+        <li>
+            <a routerLink='/my-events' (click)='searchEvents=false'>My Events</a>
+        </li>
+    </ul>
+</nav>

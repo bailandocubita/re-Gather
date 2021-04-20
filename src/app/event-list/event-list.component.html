@@ -1,10 +1,18 @@
-<h2>Events</h2>
-<div *ngFor='let event of events' class='border'>
 
-    <h2>{{event.title}}</h2>
-    <p>{{event.location}}</p>
-    <p>{{event.date}}</p>
-    <p>{{event.category}}</p>
-    <p>{{event.price}}</p>
 
-</div>
+<h2>Choose your Gathering</h2>
+
+<a *ngFor="let event of eventList| async" routerLink="/events/{{event.id}}">
+  <section>    
+    <h3>{{event.name}}</h3>
+    <p>{{event._embedded.venues[0].city.name}}, 
+        {{event._embedded.venues[0].state.stateCode}}
+    </p>
+    <p>{{event.dates.start.localDate}}</p>
+    <p>{{event.classifications[0].segment.name}}</p>
+    <!-- <p>{{event.priceRanges[0]?.currency | currency}}</p> -->
+  </section>
+</a>
+
+
+

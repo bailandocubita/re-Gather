@@ -1,50 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Observable } from 'rxjs';
+
 import { Event } from '../event';
+import { TicketmasterService } from '../ticketmaster.service';
 
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.css']
 })
+
 export class EventListComponent implements OnInit {
 
-  constructor() { }
+  eventList: Observable<any> | null = null;
+  id: string | null = '';
+  searchKeyword: string| null = this.service.searchKeyword;
+  searchCity: string| null = this.service.searchCity;
+  searchDate: string| null = this.service.searchDate;
+  searchCategory: string| null = this.service.searchCategory;
+
+  constructor(private service: TicketmasterService) { }
 
   ngOnInit(): void {
+
+  this.eventList = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
+  
   }
-
-  //placeholder for now
-  events: Event[] = [
-    {
-      title: 'Art Show',
-      description: 'This is an abstract modernism show.',
-      location: 'Detroit',
-      date: '4-16-2021',
-      category: 'art',
-      price: 20,
-      tickets: 'https://www.google.com/',
-      accessibility: 'wheelchair accessible'
-    },
-    {
-      title: 'Concert',
-      description: 'This is a music concert. Yay!',
-      location: 'Cleveland',
-      date: '5-6-2021',
-      category: 'music',
-      price: 60,
-      tickets: 'https://www.google.com/',
-      accessibility: 'venue is not wheelchair accessible'
-    },
-    {
-      title: 'Play',
-      description: 'This is going to be a great play to see!',
-      location: 'Grand Rapids',
-      date: '6-26-2021',
-      category: 'theatre',
-      price: 40,
-      tickets: 'https://www.google.com/',
-      accessibility: 'wheelchair accessible'
-    }
-  ]
-
 }

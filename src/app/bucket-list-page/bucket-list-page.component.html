@@ -1,1 +1,9 @@
-<p>bucket-list-page works!</p>
+<h2>Bucket List Events</h2>
+
+  <ul>
+    <li *ngFor="let event of bucketEvents">
+      <a routerLink="/details/{{ event }}">Bucket List Events</a>
+    </li>
+  </ul>
+<!-- </nav> -->
+
