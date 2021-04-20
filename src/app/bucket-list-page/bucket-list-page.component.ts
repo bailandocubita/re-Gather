@@ -10,8 +10,10 @@ import {Event} from '../event';
   styleUrls: ['./bucket-list-page.component.css']
 })
 export class BucketListPageComponent implements OnInit {
+  bucketEvents: Event [ ] = [ ];
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
