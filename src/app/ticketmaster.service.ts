@@ -12,6 +12,7 @@ export class TicketmasterService {
   searchCity: string | null = null;
   searchDate: string | null = null;
   searchCategory: string | null = null;
+  bucketListEvents: Event[] | null = [];
 
   constructor(private http: HttpClient) { }
 
@@ -52,5 +53,16 @@ export class TicketmasterService {
     
   }
   
+  getBucketListEvents(){
+    return this.bucketListEvents;
+  }
+
+  addBucketListEvent(event:Event){
+    this.bucketListEvents?.push(event);
+  }
+
+  removeBucketListEvent(event: Event){
+    this.bucketListEvents?.splice(this.bucketListEvents?.indexOf(event),1);
+  }
 
 }

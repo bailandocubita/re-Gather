@@ -1,9 +1,25 @@
 <h2>Bucket List Events</h2>
 
-  <ul>
+  <!-- <ul>
     <li *ngFor="let event of bucketEvents">
       <a routerLink="/details/{{ event }}">Bucket List Events</a>
     </li>
-  </ul>
-<!-- </nav> -->
+  </ul> -->
+<div>
+  
+  <section *ngFor="let event of bucketEvents">
+    <button class='remove' (click)='removeEvent(event)'>X</button>
+    <a routerLink="/events/{{event.id}}">    
+      <h3>{{event.name}}</h3>
+      <p>{{event._embedded.venues[0].city.name}}, 
+          {{event._embedded.venues[0].state.stateCode}}
+      </p>
+      <p>{{event.dates.start.localDate}}</p>
+      <p>{{event.classifications[0].segment.name}}</p>
+      
+      <!-- <p>{{event.priceRanges[0]?.currency | currency}}</p> -->
+    </a>
+  </section>
+</div>
+
 
