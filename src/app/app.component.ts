@@ -10,6 +10,7 @@ import { TicketmasterService } from './ticketmaster.service';
 
 export class AppComponent {
   title = 'reGather';
+  
   events: Observable <any> | null = null;
   searchEvents: boolean = true;
   bucketEvents: Event[] = [];

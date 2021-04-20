@@ -12,6 +12,7 @@ import { Event } from 'src/app/event';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
+
   // events: Observable<any[]> | null = null;
   search: {} | null = null;
   @Input() events: Event[] = [];
@@ -49,6 +50,14 @@ export class SearchCriteriaComponent implements OnInit {
     this.searched.emit(true);
 
     this.router.navigate(['/events', this.events[randomInt].id]);
+  }
+
+  searchEvent(){
+    
+    
+    this.searched.emit(true);
+    
+    
   }
 
 }

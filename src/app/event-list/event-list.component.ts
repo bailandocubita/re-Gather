@@ -29,6 +29,4 @@ export class EventListComponent implements OnInit {
   this.eventList = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
   
   }
-
-
 }
