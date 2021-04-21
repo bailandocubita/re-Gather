@@ -35,12 +35,12 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../../assets/AdjustmentBackground5.png");
+    /* background-image: url("../../assets/AdjustmentBackground5.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: color-burn; */
 
 }
 

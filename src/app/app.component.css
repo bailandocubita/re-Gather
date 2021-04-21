@@ -55,6 +55,13 @@ nav a{
 .container{
     margin: 6vh 0;
     padding: 20px;
+    background-image: url("../assets/AdjustmentBackground5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    min-height: 83.8vh;
+   
 }
 
 .displaynone{
