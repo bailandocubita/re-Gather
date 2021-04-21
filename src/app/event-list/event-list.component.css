@@ -8,6 +8,10 @@ a{
     color: black;
 }
 
+h2{
+    color: white;
+}
+
 h2, h3 {
     margin-bottom: 10px;
     font-family: 'Roboto Condensed', Sans-Serif;
