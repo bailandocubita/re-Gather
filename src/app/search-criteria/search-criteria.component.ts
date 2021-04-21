@@ -52,12 +52,12 @@ export class SearchCriteriaComponent implements OnInit {
     this.router.navigate(['/events', this.events[randomInt].id]);
   }
 
-  searchEvent(){
+//   searchEvent(){
     
     
-    this.searched.emit(true);
+//     this.searched.emit(true);
     
     
-  }
+//   }
 
 }
