@@ -10,8 +10,26 @@
         <input id='location' name='location' placeholder='City' 
         [(ngModel)]='location'>
 
-        <input id='date' name='date' 
-        placeholder='Date' [(ngModel)]='date'>
+        <!-- <input id='date' name='date' 
+        placeholder='Date' [(ngModel)]='date'> -->
+        <!-- <mat-form-field appearance='fill'> -->
+        <div class='dateInput'>
+            <input matInput [matDatepicker]="picker"
+            id='date' name='date' 
+            placeholder='Date' [(ngModel)]='date'>
+
+            <mat-datepicker-toggle class='datePicker' matSuffix [for]="picker"></mat-datepicker-toggle>
+
+            <mat-datepicker #picker></mat-datepicker>
+        </div>
+            
+
+            
+
+        <!-- </mat-form-field> -->
+            
+        
+
 
         <input list='category' name='category' placeholder='Category' 
         [(ngModel)]='category'>

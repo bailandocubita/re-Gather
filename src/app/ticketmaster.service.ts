@@ -21,11 +21,12 @@ export class TicketmasterService {
     let city = '';
     let date = '';
     let category = '';
-    
+    let sortDates = '';
+
     let today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-		const mm = String(today.getMonth() + 1).padStart(2, '0');
-		const yyyy = today.getFullYear();
+    let dd = String(today.getDate()).padStart(2, '0');
+		let mm = String(today.getMonth() + 1).padStart(2, '0');
+		let yyyy = today.getFullYear();
 		let todaysDate: string = yyyy + '-' + mm + '-' + dd
     
     if(searchKeyword){
@@ -38,6 +39,7 @@ export class TicketmasterService {
       date = `startDateTime=${searchDate}T04:00:00Z&endDateTime=${searchDate}T23:59:59Z&`;
     }else{
       date = `startDateTime=${todaysDate}T04:00:00Z&`;
+      sortDates = `sort=date,asc&`
     }
     if(searchCategory){
       category = `classificationName=${searchCategory}&`;
@@ -54,7 +56,7 @@ export class TicketmasterService {
       }));
 
     } else{
-      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}${date}${category}countryCode=US&sort=date,asc&apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
+      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}${date}${category}countryCode=US&${sortDates}apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
       return data._embedded.events;
       }));
     }

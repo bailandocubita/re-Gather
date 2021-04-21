@@ -19,7 +19,7 @@ export class EventListComponent implements OnInit {
   id: string | null = '';
   searchKeyword: string| null = this.service.searchKeyword;
   searchCity: string| null = this.service.searchCity;
-  searchDate: string| null = this.service.searchDate;
+  searchDate: string | null = this.service.searchDate;
   searchCategory: string| null = this.service.searchCategory;
 
   constructor(private service: TicketmasterService) { }
