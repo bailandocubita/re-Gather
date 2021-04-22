@@ -3,23 +3,23 @@
 
   <h2>Choose your Gathering</h2>
 
-  <section *ngFor="let event of eventList| async">   
-    <button (click)='saveEvent(event)'>heart</button> 
-    <a routerLink="/events/{{event.id}}">
-      <h3>{{event.name}}</h3>
-      <p>
-        {{event._embedded.venues[0].city.name}}, 
-          {{event._embedded.venues[0].state.stateCode}}
-      </p>
-      <p>
-        {{event.dates.start.localDate}}
-      </p>
-      <p>
-        {{event.classifications[0].segment.name}}
-      </p>
-      
-    </a>
-  </section>
+<section *ngFor="let event of eventList| async"> 
+  <fa-icon class="icon" (click)='saveEvent(event)' [icon]="faHeart" [ngClass]="{'icon-clicked': event.favorite}"></fa-icon>  
+  <a routerLink="/events/{{event.id}}">
+    
+    <h3>{{event.name}}</h3>
+
+  </a>
+  
+    <p>{{event._embedded.venues[0].city.name}}, 
+        {{event._embedded.venues[0].state.stateCode}}
+    </p>
+    <p>{{event.dates.start.localDate}}</p>
+    <p>{{event.classifications[0].segment.name}}</p>
+    
+  
+</section>
+
 
 </div>
 

@@ -14,6 +14,7 @@ export class EventDetailsComponent implements OnInit {
   p: Event | null = null;
   subscription: any;
 
+
   constructor(private service: TicketmasterService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

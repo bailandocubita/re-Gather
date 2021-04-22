@@ -10,12 +10,13 @@ import { BucketListPageComponent } from './bucket-list-page/bucket-list-page.com
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { FormsModule } from '@angular/forms';
 import { EventFilterPipe } from './event-filter.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FontAwesomeModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,

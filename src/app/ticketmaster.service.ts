@@ -13,6 +13,7 @@ export class TicketmasterService {
   searchDate: string | null = null;
   searchCategory: string | null = null;
   bucketListEvents: Event[] | null = [];
+  paramMap: any;
 
   constructor(private http: HttpClient) { }
 
