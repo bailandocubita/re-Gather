@@ -1,11 +1,14 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
 import { Observable } from 'rxjs';
 
 import { Event } from '../event';
 import { TicketmasterService } from '../ticketmaster.service';
+
 
 @Component({
   selector: 'app-event-list',
@@ -19,8 +22,14 @@ export class EventListComponent implements OnInit {
   id: string | null = '';
   searchKeyword: string| null = this.service.searchKeyword;
   searchCity: string| null = this.service.searchCity;
-  searchDate: string| null = this.service.searchDate;
+  searchDate: string | null = this.service.searchDate;
   searchCategory: string| null = this.service.searchCategory;
+  event: Event[] = [];
+
+
+  faHeart = faHeart;
+  farHeart = farHeart;
+
 
   constructor(private service: TicketmasterService) { }
 
@@ -29,4 +38,12 @@ export class EventListComponent implements OnInit {
   this.eventList = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
   
   }
+
+  saveEvent(eventItem: any){
+    this.service.addBucketListEvent(eventItem);
+    eventItem.favorite = true;
+    
+    // alert("this gathering has been added to your list!");
+  }
+
 }

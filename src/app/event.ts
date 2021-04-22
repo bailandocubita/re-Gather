@@ -1,7 +1,7 @@
 export interface Event {
 
     id: string;
-    title: string;
+    name: string;
     description: string;
     location: string;
     date: string;
@@ -10,4 +10,5 @@ export interface Event {
     price: number;
     tickets: string;
     accessibility: string;
+    favorite: boolean;
 }

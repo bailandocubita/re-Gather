@@ -27,15 +27,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     background-color: rgba(1 71 125 / .53);
     margin: 5px;
     box-shadow:
     0 0 75px 10px #0ff; /* outer cyan */
 
-
 }
 
-.picture {
+img {
     background-color: black;
     height:300px;
     width:500px;
@@ -45,6 +45,7 @@
     background-position: center;
     background-size: cover;
    
+
 }
 
 
@@ -68,6 +69,7 @@ body {
     background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg");
     padding: 100px;
 
+
 }
 
 h1 {
@@ -90,17 +92,28 @@ li {
     background-color: #fff;
     border-radius: 20px;
     height:85px;
+  
+section {
+    background-color: rgba(254, 254, 255, 0.8);
+    border-radius: 2px;
+    min-height:85px;
+
     color:black;
-    font-size: 20px;
+    /* font-size: 20px; */
     list-style-type: none;
     text-align: center;
-    font-weight: bold;
-    margin-top: 15px;      
+    font-weight: bold;     
+    padding: 10px;
+}
+
+section h3{
+    font-size: 20px;
 }
 
 .list {
     width: 70%;
 }
+
 
 
 button {
@@ -117,6 +130,16 @@ border-radius: 12px;
 
 
 
+p{
+    margin: 15px 0;
+}
+
+.icon {
+    color: black;
+    height: auto;
+    width: auto;
+}
+/* 
 
 @media screen and (min-width: 1024px ) {
 
@@ -162,9 +185,11 @@ h2 {
 li {
     -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
     height:100px;
 }
 
 
 
 }
+

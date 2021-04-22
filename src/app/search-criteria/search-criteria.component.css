@@ -25,17 +25,27 @@ section{
     align-items: center;
     margin-top: 6vh;
     padding-top: 6vh;
+    background-color:rgb(148, 124, 162);
+    background-image: url("../../assets/AdjustmentBackground5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    min-height: 83.8vh;
 }
 
 h2{
     font-family: 'Roboto Condensed', Sans-Serif;
     font-weight: normal;
+    color: white;
 }
 
 form{
     display: flex;
     flex-direction: column;
     width: 50%;
+    max-width: 500px;
+    min-width: 250px;
     margin: 3vh 0 2vh 0;
 }
 
@@ -45,8 +55,13 @@ input{
     padding-left: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(235, 235, 235);
+    background-color: white;
     color: black;
+    width: 100%;
+}
+
+input::placeholder{
+    color: #333;
 }
 
 button, a {
@@ -73,4 +88,15 @@ button, a {
     font-size: 20px;
 }
 
+.dateInput{
+    position: relative;
+    width: 100%;
+}
+
+.datePicker{
+    position: absolute;
+    top: 3px;
+    right: 0;
+    z-index: 1000;
+}
 

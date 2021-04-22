@@ -11,13 +11,13 @@
 <nav>
     <ul class="mainNav">
         <li>
-            <a routerLink='/search' (click)='searchEvents=true'>Search</a>
+            <a routerLink='/search' (click)='searchEvents=true'>Search<fa-icon [icon]="faSearch"></fa-icon></a>
         </li>
         <li>
-            <a routerLink='/events' (click)='searchEvents=false'>Explore</a>
+            <a routerLink='/events' (click)='searchEvents=false'>Explore<fa-icon [icon]="faGlobe"></fa-icon></a>
         </li>
         <li>
-            <a routerLink='/my-events' (click)='searchEvents=false'>My Events</a>
+            <a routerLink='/my-events' (click)='searchEvents=false'>My Events<fa-icon [icon]="faHeart"></fa-icon></a>
         </li>
     </ul>
 </nav>
