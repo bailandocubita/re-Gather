@@ -75,4 +75,8 @@ export class TicketmasterService {
     this.bucketListEvents?.splice(this.bucketListEvents?.indexOf(event),1);
   }
 
+  getEventById(id: string | null){
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`);
+  }
+
 }
