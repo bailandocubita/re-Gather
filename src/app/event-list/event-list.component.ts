@@ -42,6 +42,8 @@ export class EventListComponent implements OnInit {
   saveEvent(eventItem: any){
     this.service.addBucketListEvent(eventItem);
     eventItem.favorite = true;
+    
+    // alert("this gathering has been added to your list!");
   }
 
 }
