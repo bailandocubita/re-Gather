@@ -1,11 +1,14 @@
+<body>
+    <section>
+        <h2>Find a Gathering</h2>
 
+        <form>
+            <input id='keyword' name='keyword' placeholder='Keyword' [(ngModel)]='keyword'>
 
-<section>
-    <h2>Find a Gathering</h2>
+            <input id='location' name='location' placeholder='City' [(ngModel)]='location'>
 
-    <form>
-        <input id='keyword' name='keyword' placeholder='Keyword' 
-        [(ngModel)]='keyword'>
+            <input id='date' name='date' placeholder='Date' [(ngModel)]='date'>
+
 
         <input id='location' name='location' placeholder='City' 
         [(ngModel)]='location'>
@@ -47,3 +50,8 @@
 </section>
 
 
+        <button (click)='searchEvent(keyword, location, date, category)'>Search</button>
+
+        <button class='random-button' (click)='getRandom()'>Random</button>
+    </section>
+</body>
