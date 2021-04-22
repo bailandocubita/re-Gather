@@ -1,7 +1,5 @@
 # Re:Gather
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
-
 ## Description
 
 A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. ADD MORE HERE.
