@@ -44,7 +44,7 @@ header{
 h1 {
     color:white;
     color: rgb(102, 67, 123);
-    z-index: 
+
 }
 
 
@@ -83,10 +83,10 @@ nav a{
     color: white;
 }
 
-/* .container{
+.container{
     margin: 6vh 0;
     padding: 20px;
-} */
+
     background-image: url("../assets/AdjustmentBackground5.png");
     background-position: center;
     background-repeat: no-repeat;
