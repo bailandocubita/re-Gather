@@ -7,7 +7,8 @@
     flex-direction: column;
     align-items: center;
     background-color: rgba(223 230 229 / .5);
-
+    padding: 20px;
+    min-width: 600px;
 }
 
 img {
@@ -48,22 +49,31 @@ h1 {
     font-size: 50px;
 }
 
-li {
+section {
     background-color: rgba(254, 254, 255, 0.8);
     border-radius: 2px;
-    height:85px;
+    min-height:85px;
     color:black;
-    font-size: 20px;
+    /* font-size: 20px; */
     list-style-type: none;
     text-align: center;
     font-weight: bold;
     margin-top: 15px;
+    padding: 10px;
+}
+
+section h3{
+    font-size: 20px;
 }
 
 .list {
     width: 70%;
 }
 
+p{
+    margin: 15px 0;
+}
+/* 
 @media screen and (min-width: 1024px ) {
 
 .theBody {
@@ -93,8 +103,5 @@ li {
     -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     height:150px;
-}
-
-
-
-}
+} 
+} */

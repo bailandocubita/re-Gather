@@ -7,11 +7,16 @@
     <button (click)='saveEvent(event)'>heart</button> 
     <a routerLink="/events/{{event.id}}">
       <h3>{{event.name}}</h3>
-      <p>{{event._embedded.venues[0].city.name}}, 
+      <p>
+        {{event._embedded.venues[0].city.name}}, 
           {{event._embedded.venues[0].state.stateCode}}
       </p>
-      <p>{{event.dates.start.localDate}}</p>
-      <p>{{event.classifications[0].segment.name}}</p>
+      <p>
+        {{event.dates.start.localDate}}
+      </p>
+      <p>
+        {{event.classifications[0].segment.name}}
+      </p>
       
     </a>
   </section>
