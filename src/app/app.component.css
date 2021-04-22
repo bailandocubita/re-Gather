@@ -1,6 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+/*     font-family: 'Orbitron', sans-serif; */
+/*     color:white; */
+/* } */
+
+/* nav{ */
+/*     height: 10vh; */
+/*     border: black 1px solid; */
+    Font-Family: 'Cabin', Sans-Serif;
 }
 
 header{
@@ -13,6 +21,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto Condensed', Sans-Serif;
+    color: rgb(102, 67, 123);
+    z-index: 1000;
 }
 
 nav{
@@ -23,6 +34,7 @@ nav{
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1000;
 }
 
 nav ul{
@@ -34,11 +46,24 @@ nav ul{
     padding: 0 30px;
 }
 
+nav a{
+    font-family: 'Roboto Condensed', Sans-Serif;
+    text-decoration: none;
+    color: black;
+}
+
 .container{
     margin: 6vh 0;
     padding: 20px;
+    background-image: url("../assets/AdjustmentBackground5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    min-height: 83.8vh;
+   
 }
 
-.noscroll{
+.displaynone{
     display: none;
 }

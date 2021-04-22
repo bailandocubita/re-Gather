@@ -11,6 +11,9 @@ export class EventDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // this.route.parent.paramMap
+		// 	.pipe(switchMap(p => this.service.getFood(+p.get('id'))))
+		// 	.subscribe(food => this.food = food);
   }
 
 }
