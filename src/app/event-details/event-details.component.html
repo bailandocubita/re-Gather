@@ -17,7 +17,7 @@
             </section>
 
             <section class="right">
-                <h3>Location</h3>
+                <h3>Location<fa-icon [icon]="faMap"></fa-icon></h3>
                 <p>{{event._embedded.venues[0].city.name}}, 
                     {{event._embedded.venues[0].state.stateCode}}</p>
             </section>
@@ -46,7 +46,11 @@
             </section>
             
             <section class='left'>
+                <div class="icon">
+                    <fa-icon [icon]="faTicket"></fa-icon>
+                </div>
                 <h3>Tickets</h3>
+                
                 <p><a href={{event.url}}>Buy Tickets</a></p>
             </section>
             <section class='left'>

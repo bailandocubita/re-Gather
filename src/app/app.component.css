@@ -73,3 +73,7 @@ nav a{
 .displaynone{
     display: none;
 }
+
+.grow {
+    transform: scale(1.01);
+}

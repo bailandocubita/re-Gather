@@ -73,6 +73,12 @@ section h3{
 p{
     margin: 15px 0;
 }
+
+.icon {
+    color: black;
+    height: auto;
+    width: auto;
+}
 /* 
 @media screen and (min-width: 1024px ) {
 
