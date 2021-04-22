@@ -1,31 +1,25 @@
+<body>
+    <section>
+        <h2>Find a Gathering</h2>
 
+        <form>
+            <input id='keyword' name='keyword' placeholder='Keyword' [(ngModel)]='keyword'>
 
-<section>
-    <h2>Find a Gathering</h2>
+            <input id='location' name='location' placeholder='City' [(ngModel)]='location'>
 
-    <form>
-        <input id='keyword' name='keyword' placeholder='Keyword' 
-        [(ngModel)]='keyword'>
+            <input id='date' name='date' placeholder='Date' [(ngModel)]='date'>
 
-        <input id='location' name='location' placeholder='City' 
-        [(ngModel)]='location'>
+            <input list='category' name='category' placeholder='Category' [(ngModel)]='category'>
+            <datalist id='category'>
+                <option value='Arts & Theatre'></option>
+                <option value='Film'></option>
+                <option value='Music'></option>
+                <option value='Sports'></option>
+            </datalist>
+        </form>
 
-        <input id='date' name='date' 
-        placeholder='Date' [(ngModel)]='date'>
+        <button (click)='searchEvent(keyword, location, date, category)'>Search</button>
 
-        <input list='category' name='category' placeholder='Category' 
-        [(ngModel)]='category'>
-        <datalist id='category'>
-            <option value='Arts & Theatre'></option>
-            <option value='Film'></option>
-            <option value='Music'></option>
-            <option value='Sports'></option>
-        </datalist>
-    </form>
-
-    <button (click)='searchEvent(keyword, location, date, category)'>Search</button>
-
-    <button class='random-button' (click)='getRandom()'>Random</button>
-</section>
-
-
+        <button class='random-button' (click)='getRandom()'>Random</button>
+    </section>
+</body>

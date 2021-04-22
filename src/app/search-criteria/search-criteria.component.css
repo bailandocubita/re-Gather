@@ -1,9 +1,27 @@
+* {
+    height: 100vh;
+}
 
+
+
+
+body {
+    background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
 section{
-    width: 100%;
-    height: 80%;
+    width: 50%;
+    height:50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 6vh;
     padding-top: 6vh;
@@ -33,8 +51,8 @@ input{
 
 button, a {
     width: 50%;
-    height: 40px;
-    margin-bottom: 4vh;
+    height: 300px;
+    margin-bottom: 2vh;
     text-decoration: none;
     display:flex;
     justify-content: center;
