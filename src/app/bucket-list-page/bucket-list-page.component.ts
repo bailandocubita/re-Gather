@@ -12,6 +12,7 @@ import { TicketmasterService } from '../ticketmaster.service';
   styleUrls: ['./bucket-list-page.component.css']
 })
 
+
 export class BucketListPageComponent implements OnInit {
   bucketEvents: any[] | null = [];
   

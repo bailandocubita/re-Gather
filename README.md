@@ -1,27 +1,31 @@
-# ReGather
+# Re:Gather
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+## Description
 
-## Development server
+A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. ADD MORE Stuff HERE.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## User Story
 
-## Code scaffolding
+Add user story once format is done.ADD MORE HERE.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Link to Deployed Application
 
-## Build
+Add link.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies Used
 
-## Running unit tests
+- HTML
+- CSS
+- Javacript
+- Typescript
+- API
+- Google Fonts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Related images
 
-## Running end-to-end tests
+## Collaboraters
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Kayla Thomas](https://github.com/KaylaLT)
+- [Katherine Holland](https://github.com/kkholland)
+- [Shauna Peterson](https://github.com/Carmilla21)
+- [Kate Mora Woods](https://github.com/bailandocubita)

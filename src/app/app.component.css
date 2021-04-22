@@ -14,6 +14,7 @@
 header{
     width: 100%;
     height: 6vh;
+    min-height: 30px;
     position: fixed;
     top: 0;
     background-color: white;
@@ -31,10 +32,13 @@ nav{
     border-top: #333 1px solid;
     height: 6vh;
     width: 100%;
+    min-height: 30px;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul{
@@ -44,6 +48,8 @@ nav ul{
     align-items: center;
     height: 100%;
     padding: 0 30px;
+    width: 100%;
+    max-width: 700px;
 }
 
 nav a{
@@ -55,6 +61,13 @@ nav a{
 .container{
     margin: 6vh 0;
     padding: 20px;
+    background-image: url("../assets/AdjustmentBackground5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    min-height: 83.8vh;
+   
 }
 
 .displaynone{

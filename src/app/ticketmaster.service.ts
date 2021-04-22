@@ -22,6 +22,13 @@ export class TicketmasterService {
     let city = '';
     let date = '';
     let category = '';
+    let sortDates = '';
+
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+		let mm = String(today.getMonth() + 1).padStart(2, '0');
+		let yyyy = today.getFullYear();
+		let todaysDate: string = yyyy + '-' + mm + '-' + dd
     
     if(searchKeyword){
       keyword = `keyword=${searchKeyword}&`;
@@ -31,6 +38,9 @@ export class TicketmasterService {
     }
     if(searchDate){
       date = `startDateTime=${searchDate}T04:00:00Z&endDateTime=${searchDate}T23:59:59Z&`;
+    }else{
+      date = `startDateTime=${todaysDate}T04:00:00Z&`;
+      sortDates = `sort=date,asc&`
     }
     if(searchCategory){
       category = `classificationName=${searchCategory}&`;
@@ -42,12 +52,12 @@ export class TicketmasterService {
     // console.log(!category? 'category is null':category);
 
     if(!keyword && !city && !date && !category){
-      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
+      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?${date}countryCode=US&sort=date,asc&apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
       return data._embedded.events;
       }));
 
     } else{
-      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}${date}${category}countryCode=US&apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
+      return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?${keyword}${city}${date}${category}countryCode=US&${sortDates}apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any) => {
       return data._embedded.events;
       }));
     }
@@ -66,10 +76,8 @@ export class TicketmasterService {
     this.bucketListEvents?.splice(this.bucketListEvents?.indexOf(event),1);
   }
 
-  getEventById(id: string) {
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any)=> {
-      return data._embedded.events;
-    }));
+  getEventById(id: string | null){
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`);
   }
 
 }

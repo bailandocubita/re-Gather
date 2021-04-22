@@ -1,12 +1,10 @@
-<h2>Bucket List Events</h2>
 
-  <!-- <ul>
-    <li *ngFor="let event of bucketEvents">
-      <a routerLink="/details/{{ event }}">Bucket List Events</a>
-    </li>
-  </ul> -->
 <div>
-  
+<h2>My Saved Events</h2> 
+  <section *ngIf='bucketEvents? bucketEvents.length===0 : ""'>
+    <p>No events have been saved!</p>
+    <p>Head back to Explore to find your next gathering.</p>
+  </section>
   <section *ngFor="let event of bucketEvents">
     <button class='remove' (click)='removeEvent(event)'>X</button>
     <a routerLink="/events/{{event.id}}">    

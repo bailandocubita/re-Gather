@@ -11,8 +11,13 @@ import { EventDetailsComponent } from './event-details/event-details.component';
 import { FormsModule } from '@angular/forms';
 import { EventFilterPipe } from './event-filter.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-// import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @NgModule({
   declarations: [
@@ -25,12 +30,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
