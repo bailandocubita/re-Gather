@@ -10,6 +10,9 @@ import { BucketListPageComponent } from './bucket-list-page/bucket-list-page.com
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { FormsModule } from '@angular/forms';
 import { EventFilterPipe } from './event-filter.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+// import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { EventFilterPipe } from './event-filter.pipe';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

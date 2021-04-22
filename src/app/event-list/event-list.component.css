@@ -41,3 +41,11 @@ button{
     background-color: white;
     border: none;
 }
+
+.icon {
+    color: lightgrey;
+}
+
+.icon-clicked {
+    color:rgb(109, 68, 135)
+}

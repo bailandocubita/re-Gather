@@ -13,6 +13,7 @@ export class TicketmasterService {
   searchDate: string | null = null;
   searchCategory: string | null = null;
   bucketListEvents: Event[] | null = [];
+  paramMap: any;
 
   constructor(private http: HttpClient) { }
 
@@ -63,6 +64,12 @@ export class TicketmasterService {
 
   removeBucketListEvent(event: Event){
     this.bucketListEvents?.splice(this.bucketListEvents?.indexOf(event),1);
+  }
+
+  getEventById(id: string) {
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=XE560tQ9JSRdRrF3TNLgLzWW7FsgThE6`).pipe(map((data:any)=> {
+      return data._embedded.events;
+    }));
   }
 
 }

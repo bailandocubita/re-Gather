@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TicketmasterService } from '../ticketmaster.service';
+import { Event } from '../event';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-event-details',
@@ -7,8 +11,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
+  id: string | null = '';
+  @Input() events: Event[] = [];
+  eventList: Event[] | null = null;
+  event: Observable<any> | null = null;
+  p: Event | null = null;
+  
 
-  constructor() { }
+  constructor(private service: TicketmasterService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
