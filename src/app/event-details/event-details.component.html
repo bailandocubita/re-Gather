@@ -6,8 +6,10 @@
 
 
     <div class="theBody">
-        <h2>Name</h2>
-        <div class='picture'></div>
+        <h2>{{event.name}}</h2>
+
+        <img src={{event.images[0].url}}>
+       
         <div class='list'>
             <ul>
                 <li class="right">Location</li>
@@ -17,10 +19,12 @@
                 <li class='right'>Description</li>
                 <li class='left'>Accessibility</li>
                 <li class='right'>Date</li>
+                <li class='left'>Details</li>
             </ul>
         </div>
-        <div class='details'></div>
+
         <a href="">Ticket Master Link</a>
+
     </div>
     <div class='buttons'>
         <button class='reset'>Reset</button>
