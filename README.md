@@ -2,7 +2,7 @@
 
 ## Description
 
-A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. ADD MORE HERE.
+A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. ADD MORE Stuff HERE.
 
 ## User Story
 
