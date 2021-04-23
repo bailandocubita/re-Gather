@@ -4,7 +4,7 @@
   <h2>Choose your Gathering</h2>
 
 <section *ngFor="let event of eventList| async"> 
-  <fa-icon class="icon" (click)='saveEvent(event)' [icon]="faHeart" [ngClass]="{'icon-clicked': event.favorite}"></fa-icon>  
+  <fa-icon class="icon" (click)='saveEvent(event)' [icon]="faHeart" [ngClass]="{'icon-clicked': event.favorite}" ></fa-icon>  
   <a routerLink="/events/{{event.id}}">
     
     <h3>{{event.name}}</h3>

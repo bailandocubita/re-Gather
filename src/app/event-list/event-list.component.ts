@@ -40,10 +40,20 @@ export class EventListComponent implements OnInit {
   }
 
   saveEvent(eventItem: any){
-    this.service.addBucketListEvent(eventItem);
-    eventItem.favorite = true;
     
-    // alert("this gathering has been added to your list!");
+    console.log(eventItem);
+    if (!eventItem.favorite) {
+      console.log("in the first if")
+      eventItem.favorite = true;
+      this.service.addBucketListEvent(eventItem);
+    }
+    
+    else if (eventItem.favorite === true) {
+      console.log("in the second if")
+      eventItem.favorite = false;
+      this.service.removeBucketListEvent(eventItem);
+    }
+    
   }
 
 }
