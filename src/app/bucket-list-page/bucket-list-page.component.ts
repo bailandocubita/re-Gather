@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
 
@@ -15,6 +16,8 @@ import { TicketmasterService } from '../ticketmaster.service';
 
 export class BucketListPageComponent implements OnInit {
   bucketEvents: any[] | null = [];
+  faTrash = faTrashAlt;
+
   
   constructor(private service: TicketmasterService) { }
 
