@@ -1,23 +1,22 @@
-
 <div>
-<h2>My Saved Events</h2> 
-  <section *ngIf='bucketEvents? bucketEvents.length===0 : ""'>
+  <h2>My Saved Events</h2>
+  <!--- <button class="searchSavedEvents" (click)="(savedEvents)"></button> -->
+  <section *ngIf="bucketEvents ? bucketEvents.length === 0 : ''">
     <p>No events have been saved!</p>
     <p>Head back to Explore to find your next gathering.</p>
   </section>
   <section *ngFor="let event of bucketEvents">
-    <button class='remove' (click)='removeEvent(event)'>X</button>
-    <a routerLink="/events/{{event.id}}">    
-      <h3>{{event.name}}</h3>
-      <p>{{event._embedded.venues[0].city.name}}, 
-          {{event._embedded.venues[0].state.stateCode}}
+    <button class="remove" (click)="removeEvent(event)">X</button>
+    <a routerLink="/events/{{ event.id }}">
+      <h3>{{ event.name }}</h3>
+      <p>
+        {{ event._embedded.venues[0].city.name }},
+        {{ event._embedded.venues[0].state.stateCode }}
       </p>
-      <p>{{event.dates.start.localDate}}</p>
-      <p>{{event.classifications[0].segment.name}}</p>
-      
+      <p>{{ event.dates.start.localDate }}</p>
+      <p>{{ event.classifications[0].segment.name }}</p>
+
       <!-- <p>{{event.priceRanges[0]?.currency | currency}}</p> -->
     </a>
   </section>
 </div>
-
-
