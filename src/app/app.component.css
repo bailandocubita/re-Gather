@@ -1,20 +1,20 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    /* color:white; */
-}
+     font-family: 'Orbitron', sans-serif; 
+     /* color:white;  */
+ } 
 
 /* nav{ */
 /*     height: 10vh; */
-/*     border: black 1px solid; */
-    /* Font-Family: 'Cabin', Sans-Serif; */
-/* } */
+    /* border: black 1px solid;
+    Font-Family: 'Cabin', Sans-Serif;
+} */
+
 
 header{
     width: 100%;
-    height: 6vh;
-    min-height: 30px;
+    height: 7vh;
     position: fixed;
     top: 0;
     background-color: white;
@@ -23,8 +23,16 @@ header{
     justify-content: center;
     align-items: center;
     font-family: 'Roboto Condensed', Sans-Serif;
-    color: rgb(102, 67, 123);
-    z-index: 1000;
+    color:white;
+    z-index: 1;
+}
+
+
+
+
+
+h1 {
+    color:white;
 }
 
 nav{
@@ -32,13 +40,10 @@ nav{
     border-top: #333 1px solid;
     height: 6vh;
     width: 100%;
-    min-height: 30px;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
+    z-index: 1;
 }
 
 nav ul{
@@ -48,8 +53,6 @@ nav ul{
     align-items: center;
     height: 100%;
     padding: 0 30px;
-    width: 100%;
-    max-width: 700px;
 }
 
 nav a{
@@ -58,22 +61,12 @@ nav a{
     color: black;
 }
 
-.container{
+/*.container{
     margin: 6vh 0;
     padding: 20px;
-    background-image: url("../assets/AdjustmentBackground5.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    mix-blend-mode: color-burn;
-    min-height: 83.8vh;
-   
-}
+} */
+
 
 .displaynone{
     display: none;
-}
-
-.grow {
-    transform: scale(1.01);
 }
