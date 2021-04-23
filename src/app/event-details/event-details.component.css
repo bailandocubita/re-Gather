@@ -1,117 +1,103 @@
 
-
-
-
 .theBody3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(137 91 144 / .7);
-        box-shadow:
-        inset -60px 0 120px #0ff; /* right cyan */
-        }   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(137 91 144 / .7);
+    box-shadow:
+    inset -60px 0 120px #0ff; /* right cyan */
+    }   
 
 
 .theBody2 {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(150 72 255 /.4);
-    
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: rgba(150 72 255 /.4);
+
 
 }
 
 
 .theBody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: rgba(1 71 125 / .53);
+margin: 5px;
+box-shadow:
+0 0 75px 10px #0ff; /* outer cyan */
 
-    background-color: rgba(1 71 125 / .53);
-    margin: 5px;
-    box-shadow:
-    0 0 75px 10px #0ff; /* outer cyan */
 
 }
 
-img {
-    background-color: black;
-    height:300px;
-    width:500px;
-    margin:5px;
-    border-radius: 15px;
-    background-image:url("../../assets/Scooter1.jpg");
-    background-position: center;
-    background-size: cover;
-   
+.picture {
+background-color: black;
+height:300px;
+width:500px;
+margin:5px;
+border-radius: 15px;
+background-image:url("../../assets/Scooter1.jpg");
+background-position: center;
+background-size: cover;
 
 }
 
 
 .details {
-    background-color: black;
-    height: 100px;
-    width:300px;
-    margin: 20px;
-    border-radius:5px;
+background-color: black;
+height: 100px;
+width:300px;
+margin: 20px;
+border-radius:5px;
 
 }
 
 body {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    mix-blend-mode: color-burn;
-    background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg");
-    padding: 100px;
-
+display:flex;
+flex-direction: column;
+align-items: center;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+mix-blend-mode: color-burn;
+background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg");
+padding: 100px;
 
 }
 
 h1 {
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    height: 200px;
-    font-size: 100px;
-    font-weight: bold;
-    background: -webkit-linear-gradient(rgb(3, 29, 41), #4620f0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .0005px rgb(252, 211, 255);
+margin-top: 25px;
+display: flex;
+align-items: center;
+height: 200px;
+font-size: 100px;
+font-weight: bold;
+background: -webkit-linear-gradient(rgb(3, 29, 41), #4620f0);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke: .0005px rgb(252, 211, 255);
 }
 
 
 
 
 li {
-    background-color: #fff;
-    border-radius: 20px;
-    height:85px;
-}
-section {
-    background-color: rgba(254, 254, 255, 0.8);
-    border-radius: 2px;
-    min-height:85px;
+background-color: #fff;
+border-radius: 20px;
+height:85px;
+color:black;
+font-size: 20px;
+list-style-type: none;
+text-align: center;
+font-weight: bold;
+margin-top: 15px;      
 
-    color:black;
-    /* font-size: 20px; */
-    list-style-type: none;
-    text-align: center;
-    font-weight: bold;     
-    padding: 10px;
-}
-
-section h3{
-    font-size: 20px;
 }
 
 .list {
-    width: 70%;
+width: 70%;
 }
 
 
@@ -130,66 +116,55 @@ border-radius: 12px;
 
 
 
-p{
-    margin: 15px 0;
-}
-
-.icon {
-    color: black;
-    height: auto;
-    width: auto;
-}
-/* 
 
 @media screen and (min-width: 1024px ) {
 
 .theBody {
-    width: 600px;
-    border-radius: 50px;
+width: 600px;
+border-radius: 50px;
 }
 
 
 .theBody2 {
-    width:525px;
-    margin:50px;
-    border-radius:50px;
+width:525px;
+margin:50px;
+border-radius:50px;
 
 }
 
 
 .theBody3 {
-    width:500px;
-    margin:25px;
-    border-radius:50px;
+width:500px;
+margin:25px;
+border-radius:50px;
 }
 
 .picture {
-    height: 200px;
-    width: 350px;
-    
+height: 200px;
+width: 350px;
+
+
 }
-    
+
 h2 {
-    height: 100px;
-    margin:10px;
-    display: flex;
-    align-items: center;
-    font-size: 35px;
-    color: white;
-    background: -webkit-linear-gradient(rgb(3, 29, 41), #4620f0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .005px rgb(255, 211, 249);
+height: 100px;
+margin:10px;
+display: flex;
+align-items: center;
+font-size: 35px;
+color: white;
+background: -webkit-linear-gradient(rgb(3, 29, 41), #4620f0);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke: .005px rgb(255, 211, 249);
 }
 
 li {
-    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-
-    height:100px;
+-webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+height:100px;
 }
 
 
 
 }
-
