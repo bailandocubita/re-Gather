@@ -1,76 +1,56 @@
+<!-- <p>event-details works!</p> -->
 
 <body>
     <h1>Event Details</h1>
 
 
     <div class="theBody">
+        <div class="theBody2">
+            <div class="theBody3">
+                <h2>{{event.name}}</h2>
+                <img src={{event.images[0].url}}>
+                <div class='list'>
+                    <ul>
+                        <section class="right">
+                            <h3>Date</h3>
+                            <p>{{event.dates.start.localDate}}</p>
+                        </section>
+                        <section class='left'>
+                            <h3>Location
+                                <fa-icon i class="faMap" [icon]="faMap"></fa-icon>
+                            </h3>
+                            <p>{{event._embedded.venues[0].city.name}},
+                                {{event._embedded.venues[0].state.stateCode}}
+                            </p>
+                        </section>
+                        <section class='right'>
+                            <h3>Venue</h3>
+                            <p>{{event._embedded.venues[0].name}}</p>
+                        </section>
+                        <section class='left'>
+                            <h3>Status</h3>
+                            <p>{{event.dates.status.code}}</p>
+                        </section>
+                        <section class='right'>
+                            <h3>Price Range</h3>
+                            <p>{{event.priceRanges[0].min|currency}} - {{event.priceRanges[0].max|currency}}</p>
+                        </section>
+                        <section class='left'>
+                            <h3>Category</h3>
+                            <p>{{event.classifications[0].segment.name}} >
+                                {{event.classifications[0].genre.name}} >
+                                {{event.classifications[0].subGenre.name}}
+                            </p>
+                        </section>
 
-        <h2>{{event.name}}</h2>
-
-        <img src={{event.images[0].url}}>
-       
-        <div class='list'>
-            
-            <section class='right'>
-                <h3>Date</h3>
-                <p>{{event.dates.start.localDate}}</p>
-            </section>
-
-            <section class="right">
-                <h3>Location<fa-icon [icon]="faMap"></fa-icon></h3>
-                <p>{{event._embedded.venues[0].city.name}}, 
-                    {{event._embedded.venues[0].state.stateCode}}</p>
-            </section>
-
-            <section class='right'>
-                <h3>Venue</h3>
-                <p>{{event._embedded.venues[0].name}}</p>
-            </section>
-
-            <section class='right'>
-                <h3>Status</h3>
-                <p>{{event.dates.status.code}}</p>
-            </section>
-
-            <section class='left'>
-                <h3>Price Range</h3>
-                <p>{{event.priceRanges[0].min|currency}} - {{event.priceRanges[0].max|currency}}</p>
-            </section>
-
-            <section class='right'>
-                <h3>Category</h3>
-                <p>{{event.classifications[0].segment.name}} >
-                     {{event.classifications[0].genre.name}} >
-                     {{event.classifications[0].subGenre.name}}
-                </p>
-            </section>
-            
-            <section class='left'>
-                <div class="icon">
-                    <fa-icon [icon]="faTicket"></fa-icon>
+                    </ul>
                 </div>
-                <h3>Tickets</h3>
-                
-                <p><a href={{event.url}}>Buy Tickets</a></p>
-            </section>
-            <section class='left'>
-                <h3>Details</h3>
-                <p>{{event.info}}</p>
-                <p>{{event.pleaseNote}}</p>
-            </section>
-            <section class='left'>
-                <h3>Accessibility</h3>
-                <p>{{event._embedded.venues[0].ada.adaCustomCopy}}</p>
-                <p>{{event._embedded.venues[0].ada.adaPhones}}</p>
-            </section>
+            </div>
+            <div class="icon">
+                <p class="tickets">Buy Tickets</p>
+                <fa-icon i class="tIcon" [icon]="faTicket"></fa-icon>
+            </div>
         </div>
-
-        
-
     </div>
-    <!-- <div class='buttons'>
-        <button class='reset'>Reset</button>
-        <button class='search'>Search</button>
-        <button class='random'>Random</button>
-    </div> -->
+
 </body>
