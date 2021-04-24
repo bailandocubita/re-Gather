@@ -3,8 +3,13 @@
     padding: 0;
 }
 
+.icon-container {
+    display: flex;
+    align-items: flex-end;
+}
+
 div{
-    min-height: 83.8vh;
+    /* min-height: 83.8vh; */
     display: flex;
     flex-direction: column;
     align-items: center;

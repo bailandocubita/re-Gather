@@ -5,9 +5,10 @@
     <p>Head back to Explore to find your next gathering.</p>
   </section>
   <section *ngFor="let event of bucketEvents">
-    <fa-icon [icon]="faTrash" class='remove' (click)='removeEvent(event)'></fa-icon>
-    <!-- <button class='remove' (click)='removeEvent(event)'>X</button> -->
-    <a routerLink="/events/{{event.id}}">
+    <div class="icon-container">
+      <fa-icon [icon]="faTrash" class='remove' (click)='removeEvent(event)'></fa-icon>
+    </div>
+    <a routerLink="/events/{{event.id}}">    
       <h3>{{event.name}}</h3>
       <p>{{event._embedded.venues[0].city.name}},
         {{event._embedded.venues[0].state.stateCode}}

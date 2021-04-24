@@ -17,6 +17,7 @@ import { TicketmasterService } from '../ticketmaster.service';
 })
 
 export class EventListComponent implements OnInit {
+  [x: string]: any;
 
   eventList: Observable<any> | null = null;
   id: string | null = '';
@@ -40,16 +41,13 @@ export class EventListComponent implements OnInit {
   }
 
   saveEvent(eventItem: any){
-    
-    console.log(eventItem);
+  
     if (!eventItem.favorite) {
-      console.log("in the first if")
       eventItem.favorite = true;
       this.service.addBucketListEvent(eventItem);
     }
     
     else if (eventItem.favorite === true) {
-      console.log("in the second if")
       eventItem.favorite = false;
       this.service.removeBucketListEvent(eventItem);
     }

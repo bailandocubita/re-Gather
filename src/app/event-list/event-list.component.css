@@ -63,6 +63,11 @@ button{
     border: none;
 }
 
+.icon-container {
+    display: flex;
+    align-items: flex-end;
+}
+
 .icon {
     color: lightgrey;
 }
