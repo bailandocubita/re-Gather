@@ -62,3 +62,7 @@ button{
     background-color: white;
     border: none;
 }
+
+.bucketList {
+    padding: 100px;
+}

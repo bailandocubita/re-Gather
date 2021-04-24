@@ -1,4 +1,3 @@
-
 <app-search-criteria [events]='events | async' *ngIf='searchEvents' (searched)='onSearch($event)'></app-search-criteria>
 
 <header>
@@ -12,13 +11,16 @@
 <nav>
     <ul>
         <li>
-            <a routerLink='/search' (click)='searchEvents=true'>Search<fa-icon [icon]="faSearch"></fa-icon></a>
+            <a routerLink='/search' (click)='searchEvents=true'>Search<fa-icon i class="navIcon" [icon]="faSearch">
+                </fa-icon></a>
         </li>
         <li>
-            <a routerLink='/events' (click)='searchEvents=false'>Explore<fa-icon [icon]="faGlobe"></fa-icon></a>
+            <a routerLink='/events' (click)='searchEvents=false'>Explore<fa-icon i class="navIcon" [icon]="faGlobe">
+                </fa-icon></a>
         </li>
         <li>
-            <a routerLink='/my-events' (click)='searchEvents=false'>My Events<fa-icon [icon]="faHeart"></fa-icon></a>
+            <a routerLink='/my-events' (click)='searchEvents=false'>My Events<fa-icon i class="navIcon"
+                    [icon]="faHeart"></fa-icon></a>
         </li>
     </ul>
 </nav>
