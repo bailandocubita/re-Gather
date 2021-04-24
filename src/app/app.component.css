@@ -77,3 +77,7 @@ nav a{
 .grow {
     transform: scale(1.01);
 }
+
+.icon {
+    padding-left: 5px;
+}
