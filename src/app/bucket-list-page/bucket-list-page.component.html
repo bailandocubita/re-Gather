@@ -1,6 +1,5 @@
-
-<div>
-<h2>My Saved Events</h2> 
+<div class="bucketList">
+  <h2>My Saved Events</h2>
   <section *ngIf='bucketEvents? bucketEvents.length===0 : ""'>
     <p>No events have been saved!</p>
     <p>Head back to Explore to find your next gathering.</p>
@@ -8,17 +7,15 @@
   <section *ngFor="let event of bucketEvents">
     <fa-icon [icon]="faTrash" class='remove' (click)='removeEvent(event)'></fa-icon>
     <!-- <button class='remove' (click)='removeEvent(event)'>X</button> -->
-    <a routerLink="/events/{{event.id}}">    
+    <a routerLink="/events/{{event.id}}">
       <h3>{{event.name}}</h3>
-      <p>{{event._embedded.venues[0].city.name}}, 
-          {{event._embedded.venues[0].state.stateCode}}
+      <p>{{event._embedded.venues[0].city.name}},
+        {{event._embedded.venues[0].state.stateCode}}
       </p>
       <p>{{event.dates.start.localDate}}</p>
       <p>{{event.classifications[0].segment.name}}</p>
-      
+
       <!-- <p>{{event.priceRanges[0]?.currency | currency}}</p> -->
     </a>
   </section>
 </div>
-
-
