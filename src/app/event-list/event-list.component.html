@@ -3,7 +3,7 @@
 
   <h2>Choose your Gathering</h2>
 
-<section *ngFor="let event of eventList| async">
+<section *ngFor="let event of eventList">
   <div class="icon-container">
     <fa-icon class="icon" (click)='saveEvent(event)' [icon]="faHeart" [ngClass]="{'icon-clicked': event.favorite}" ></fa-icon>  
   </div> 

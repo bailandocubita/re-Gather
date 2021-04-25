@@ -12,7 +12,9 @@
                 <div class='list'>
                     <ul>
                         <section class="right">
-                            <h3>Date</h3>
+                            <h3>Date
+                                <fa-icon [icon]="faCalendar"></fa-icon>
+                            </h3>
                             <p>{{event.dates.start.localDate}}</p>
                         </section>
                         <section class='left'>
@@ -24,19 +26,27 @@
                             </p>
                         </section>
                         <section class='right'>
-                            <h3>Venue</h3>
+                            <h3>Venue
+                                <fa-icon [icon]="faLandmark"></fa-icon>
+                            </h3>
                             <p>{{event._embedded.venues[0].name}}</p>
                         </section>
                         <section class='left'>
-                            <h3>Status</h3>
+                            <h3>Status
+                                <fa-icon [icon]="faCheck"></fa-icon>
+                            </h3>
                             <p>{{event.dates.status.code}}</p>
                         </section>
                         <section class='right'>
-                            <h3>Price Range</h3>
+                            <h3>Price Range
+                                <fa-icon [icon]="faPrice"></fa-icon>
+                            </h3>
                             <p>{{event.priceRanges[0].min|currency}} - {{event.priceRanges[0].max|currency}}</p>
                         </section>
                         <section class='left'>
-                            <h3>Category</h3>
+                            <h3>Category
+                                <fa-icon [icon]="faFolder"></fa-icon>
+                            </h3>
                             <p>{{event.classifications[0].segment.name}} >
                                 {{event.classifications[0].genre.name}} >
                                 {{event.classifications[0].subGenre.name}}
