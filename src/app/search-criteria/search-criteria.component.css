@@ -40,6 +40,10 @@ input:hover {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
 }
 
+input::placeholder{
+    color: #333;
+}
+
 .dateInput{
     position: relative;
     width: 100%;
