@@ -14,9 +14,21 @@ section{
 }
 
 h2{
-    font-family: 'Roboto Condensed', Sans-Serif;
-    font-weight: normal;
-    color: white;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width:75%;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(255, 166, 248), #dad2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .0001px rgb(30, 2, 32);
+    font-family: 'Orbitron', sans-serif;
 }
 
 form{
@@ -92,4 +104,11 @@ button:hover {
 .polygon {
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     height:50px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    h2 {
+        width:100%;
+    }
 }
