@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+.bucketList{
+    margin: 6vh 0;
+    padding: 20px;
+}
 
 .icon-container {
     display: flex;
@@ -71,6 +75,3 @@ button{
     border: none;
 }
 
-/* .bucketList {
-    padding: 100px;
-} */
