@@ -3,7 +3,7 @@ import { Observable, SubscribableOrPromise, Subscription } from 'rxjs';
 import { TicketmasterService } from '../ticketmaster.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { faMapMarkerAlt, faTicketAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faCheck, faDollarSign, faFolderOpen, faLandmark, faMapMarkerAlt, faTicketAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-event-details',
@@ -16,6 +16,11 @@ export class EventDetailsComponent implements OnInit {
   subscription: any;
   faTicket = faTicketAlt;
   faMap = faMapMarkerAlt;
+  faLandmark = faLandmark;
+  faCalendar = faCalendarAlt;
+  faCheck = faCheck;
+  faPrice = faDollarSign;
+  faFolder = faFolderOpen;
 
 
   constructor(private service: TicketmasterService, private route: ActivatedRoute) { }

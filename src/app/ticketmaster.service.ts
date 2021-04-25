@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class TicketmasterService {
 
   constructor(private http: HttpClient) { }
 
-  searchTicketmaster(searchKeyword: string | null = null, searchCity: string| null = null,searchDate: string| null = null, searchCategory: string| null = null){
+  searchTicketmaster(searchKeyword: string | null = null, searchCity: string| null = null,searchDate: string| null = null, searchCategory: string| null = null):Observable<any>{
     let keyword = '';
     let city = '';
     let date = '';

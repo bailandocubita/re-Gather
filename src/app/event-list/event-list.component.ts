@@ -19,13 +19,14 @@ import { TicketmasterService } from '../ticketmaster.service';
 export class EventListComponent implements OnInit {
   [x: string]: any;
 
-  eventList: Observable<any> | null = null;
+  eventList: any;
   id: string | null = '';
   searchKeyword: string| null = this.service.searchKeyword;
   searchCity: string| null = this.service.searchCity;
   searchDate: string | null = this.service.searchDate;
   searchCategory: string| null = this.service.searchCategory;
   event: Event[] = [];
+  favoritedList: any;
 
 
   faHeart = faHeart;
@@ -35,16 +36,22 @@ export class EventListComponent implements OnInit {
   constructor(private service: TicketmasterService) { }
 
   ngOnInit(): void {
+    this.favoritedList = this.service.getBucketListEvents()
+    this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory).subscribe(response => {
+      this.eventList = response;
+      this.eventList?.forEach((gathering: any) => {gathering.favorite = this.isFavorited(gathering.id)})
+    });
 
-  this.eventList = this.service.searchTicketmaster(this.searchKeyword, this.searchCity, this.searchDate, this.searchCategory);
-  
   }
 
   saveEvent(eventItem: any){
-  
     if (!eventItem.favorite) {
       eventItem.favorite = true;
-      this.service.addBucketListEvent(eventItem);
+      let isSelected = this.isFavorited(eventItem.id);
+      if (!isSelected) {
+        this.service.addBucketListEvent(eventItem);
+      }
+      
     }
     
     else if (eventItem.favorite === true) {
@@ -52,6 +59,14 @@ export class EventListComponent implements OnInit {
       this.service.removeBucketListEvent(eventItem);
     }
     
+  }
+
+  isFavorited(id: string) {
+    let item = this.favoritedList.find((gathering: any) => gathering.id === id);
+    if (item) {
+      return true;
+    }
+    return false;
   }
 
 }
