@@ -6,13 +6,16 @@
 .icon-container {
     display: flex;
     align-items: flex-end;
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
 }
 
 div{
-    /* min-height: 83.8vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 a{
@@ -22,7 +25,7 @@ a{
 
 
 h2{
-    color: white;
+    color: #333;
 }
 
 h2, h3 {
@@ -68,6 +71,6 @@ button{
     border: none;
 }
 
-.bucketList {
+/* .bucketList {
     padding: 100px;
-}
+} */

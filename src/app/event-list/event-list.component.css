@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 a{
     text-decoration: none;
     color: black;
@@ -10,7 +11,7 @@ a{
 }
 
 h2{
-    color: white;
+    color: #333;
     text-align: center;
 }
 
@@ -27,7 +28,7 @@ h3{
     margin-right: 35px;
 }
 
-div{
+main, div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +65,9 @@ button{
 }
 
 .icon-container {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
     display: flex;
     align-items: flex-end;
 }
