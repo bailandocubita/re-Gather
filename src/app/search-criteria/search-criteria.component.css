@@ -9,6 +9,8 @@ section{
     padding-top: 6vh;
     background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg"); 
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 h2{
