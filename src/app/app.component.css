@@ -66,6 +66,10 @@ nav a{
     color: white;
 }
 
+nav li:hover {
+    transform: scale(1.05);
+}
+
 .navIcon {
     margin-left: 5px;
 }
@@ -78,10 +82,6 @@ nav a{
 
 .displaynone{
     display: none;
-}
-
-.grow {
-    transform: scale(1.01);
 }
 
 .icon {
