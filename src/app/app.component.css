@@ -19,6 +19,7 @@ a {
 header{
     width: 100%;
     height: 7vh;
+    min-height: 30px;
     position: fixed;
     top: 0;
     background-color: black;
@@ -43,6 +44,7 @@ nav{
     background-color: black;
     /* border-top: #333 1px solid; */
     height: 6vh;
+    min-height: 30px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -74,10 +76,10 @@ nav li:hover {
     margin-left: 5px;
 }
 
-/*.container{
+.container{
     margin: 6vh 0;
     padding: 20px;
-} */
+}
 
 
 .displaynone{
