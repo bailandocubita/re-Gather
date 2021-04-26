@@ -2,15 +2,15 @@
 
 ## Description
 
-A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. ADD MORE Stuff HERE.
+A group project for [Grand Circus](https://www.grandcircus.co/bootcamps/) Front-End Bootcamp. Re:Gather is a site created to allow users to search for events of various kinds for all ages.
 
 ## User Story
 
-Add user story once format is done.ADD MORE HERE.
+As a user, I'd want an easy way to search for events for friend gatherings, dates, and family fun.
 
-## Link to Deployed Application
+## Link to Application
 
-Add link.
+http://localhost:4200/
 
 ## Technologies Used
 
@@ -20,8 +20,6 @@ Add link.
 - Typescript
 - API
 - Google Fonts
-
-## Related images
 
 ## Collaboraters
 
