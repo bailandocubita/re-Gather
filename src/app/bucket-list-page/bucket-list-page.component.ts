@@ -28,4 +28,9 @@ export class BucketListPageComponent implements OnInit {
   removeEvent(bucketEvent: any){
     this.service.removeBucketListEvent(bucketEvent);
   }
+
+ printSaved() {
+    window.print();
+ }
 }
+
