@@ -3,8 +3,7 @@
     padding: 0;
 }
 .bucketList{
-    margin: 6vh 0;
-    padding: 20px;
+    margin: 6vh 0; 
     background-image: url("../../assets/andre-benz-D6W63o3ZLQY-unsplash.jpg"); 
     background-size: cover;
     background-position: center;
@@ -12,7 +11,8 @@
     display: flex;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height:200vh;
+    
 }
 
 .icon-container {
@@ -73,9 +73,12 @@ section{
     flex-direction: column;
     padding: 10px;
     background-color: white;
+    text-align: center;
     border: none;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow:
+    inset -90px 0 55px rgba(0, 255, 255, 0.397);
     margin-bottom: 10px;
     position: relative;
 }
