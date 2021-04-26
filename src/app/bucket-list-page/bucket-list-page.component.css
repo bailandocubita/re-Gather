@@ -90,7 +90,6 @@ button {
   height: 20px;
   position: absolute;
   color:white;
-  z-index: 900;
   margin-right: 5px;
   margin-top: 20px;
   border: none;
